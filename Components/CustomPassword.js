@@ -1,31 +1,32 @@
 import React, {useEffect, useState } from 'react'
-import {View, TextInput, StyleSheet} from 'react-native'
+import {StyleSheet, View, TextInput, Image, Text} from 'react-native'
 
-const CustomInput = (props) => {
+const CustomPassword = (props) => {
 
-    const [variable, setVariable] = useState('')
+    const [value, setValue] = useState('')
 
     const handleInputChange = (text) => {
-        setVariable(text);
+        setValue(text);
     }
 
     useEffect(() => {
-        props.getData(variable);
-    },[variable]);
+        props.getData(value)
+    },[value])
 
   return (
-    <View style={[styles.container, props.customInputStyle]}>
+    <View style={[styles.container, props.customInputStyle]} >
         {props.getIcon}
         <TextInput
-            style={[props.customInputStyle]}
             placeholder={props.placeholder}
             onChangeText={handleInputChange}
+            secureTextEntry
         />
+
     </View>
   )
 }
 
-export default CustomInput
+export default CustomPassword
 
 const styles = StyleSheet.create({
     container: {
@@ -37,7 +38,11 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: 'white',
         borderRadius: 5,
-        marginBottom: 20,
+        marginBottom: 10,
     },
-    
+
+    image: {
+        height: 30,
+        width: 30
+    }
 })

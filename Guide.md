@@ -2,7 +2,13 @@
 
 ## Button
 ```javascript
+
+    import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+
+
     <CustomButton 
+
+    getIcon={<FontAwesome5 name="user-alt" size={24} color="black" />}
 
     title='Button' 
     
@@ -19,6 +25,8 @@
 
 - title - Using this you can set the title of button
 
+- getIcon('PassYourPngHere') - using this you can set PNG
+
 ## Input Field
 
 
@@ -26,8 +34,8 @@
         const [value, setValue] = useState('')
 
         <CustomInput
-        
-        onChange={setValue} 
+
+        getData={setVariable} 
         
         customInputStyle={{color: 'gray',}}
 
@@ -39,7 +47,9 @@
 
 - placehilder - Using this you can set the placeholder text
 
-## CustomText
+- getIcon('PassYourPngHere') - using this you can set PNG
+
+## Custom Text
 
 ```javascript
     <CustomText
@@ -83,4 +93,27 @@
 - customAboutStyle - helps to add the style to the description of the card
 
 - customRatingsStyle - helps to add the style to the rating
+
+## Custom Checkbox
+
+```terminal
+    npx expo install expo-checkbox
+```
+
+- Before using Checkbox Run this command on terminal (if you are not using Expo CLI ignore it)
+
+```javascript
+      const [isCheck, setCheck] = useState()
+
+      <CustomCheckbox 
+      
+      getStatus={setCheck} 
+      
+      default={true}
+      
+      />
+```
+- getStatus - helps to  get the status from the Checkbox component
+
+- default - sets the default status for the Checkbox
 
