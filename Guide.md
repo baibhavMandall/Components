@@ -70,6 +70,10 @@
 
 - about - helps to add the description of the card
 
+- ratings - helps to add the rating in the card
+
+- customImage - helps to add the image
+
 - customCardStyle - helps to add the style of the card dynamically
 
 - customImageStyle - helps to add the style into the image of the card
@@ -78,4 +82,5 @@
 
 - customAboutStyle - helps to add the style to the description of the card
 
-- customImage - helps to add the image
+- customRatingsStyle - helps to add the style to the rating
+
