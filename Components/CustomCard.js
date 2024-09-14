@@ -15,6 +15,9 @@ const CustomCard = (props) => {
         <Text style={[styles.text,{color: 'gray'}, props.customAboutStyle]} >
             {props.about || 'About'}</Text>
 
+        <Text style={[styles.text,{color: 'red'}, props.customRatingsStyle]} >
+            {props.ratings || 'Ratings 4.5/5'}</Text>
+
         </View>
     </View>
   )
