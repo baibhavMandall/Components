@@ -17,9 +17,11 @@ const CustomInput = (props) => {
     <View style={[styles.container, props.customInputStyle]}>
         {props.getIcon}
         <TextInput
-            style={[props.customInputStyle]}
+            style={[styles.text , props.customTextStyle]}
             placeholder={props.placeholder}
             onChangeText={handleInputChange}
+            placeholderTextColor={props.PlaceholderColor}
+            inputMode={props.inputMode}
         />
     </View>
   )
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: 'white',
         borderRadius: 5,
-        marginBottom: 20,
+        marginTop: 20,
     },
     
 })

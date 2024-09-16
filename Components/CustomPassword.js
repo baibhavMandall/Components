@@ -17,8 +17,10 @@ const CustomPassword = (props) => {
     <View style={[styles.container, props.customInputStyle]} >
         {props.getIcon}
         <TextInput
+            style={[styles.text , props.customTextStyle]}
             placeholder={props.placeholder}
             onChangeText={handleInputChange}
+            placeholderTextColor={props.PlaceholderColor}
             secureTextEntry
         />
 
@@ -38,11 +40,6 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: 'white',
         borderRadius: 5,
-        marginBottom: 10,
+        marginTop: 20,
     },
-
-    image: {
-        height: 30,
-        width: 30
-    }
 })

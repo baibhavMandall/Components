@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 25,
     borderRadius: 4,
+    marginVertical: 20,
   },
   text: {
     fontSize: 16,

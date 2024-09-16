@@ -49,6 +49,8 @@
 
 - getIcon('PassYourPngHere') - using this you can set PNG
 
+- inputMode={'numeric'} - Using this you can get the input in number
+
 ## Custom Text
 
 ```javascript
@@ -117,3 +119,31 @@
 
 - default - sets the default status for the Checkbox
 
+## Custom Dropdown
+
+```javascript
+    <CustomDropdown
+    
+    getData={setRole} 
+
+    data={data} 
+
+    ScrollEnabled={false} 
+
+    customTextStyle={{ color: 'white', }}
+
+    customDropdownTextStyle={{color: 'white'}} 
+
+    customDropdownStyle={{ width: 300, borderRadius: 15, backgroundColor: 'rgba(0, 0, 0, 0.5)' }} 
+    
+    customDropdownAreStyle={{backgroundColor: 'rgba(0, 0, 0, 0.5)', elevation: 0, borderColor: 'white', borderWidth: 2, width: 300}} 
+        
+    />
+
+```
+
+- getData - using this you can get the data selected by user
+
+- data - using this you can set the dropdown list
+
+- ScrollEnabled - using this you can set dropdown list scrollable or static
